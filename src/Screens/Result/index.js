@@ -11,7 +11,6 @@ const ResultScreen = ({ route, navigation }) => {
     const [lang, setLang]     = useRecoilState(Language)
     const [thems, setTheme]   = useRecoilState(Theme)
 
-    console.log("thems => ", thems);
     return (
         <View>
             <BannerAds/>

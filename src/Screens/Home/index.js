@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { View, Text, TextInput, StyleSheet } from "react-native"
 import BannerAds from "../../Components/BannerAds"
 import ButtonCustom from "../../Components/Button"
-import { Color, Curency } from "../../Config"
+import { Color } from "../../Config"
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import { useRecoilState } from "recoil"
 import { Theme, Language } from "../../Stores"
@@ -17,9 +17,10 @@ const style = StyleSheet.create({
     textFiled : {
         borderWidth:1, 
         borderColor: Color.secondary, 
-        borderRadius:10, 
         paddingHorizontal:15, 
-        marginVertical: 4
+        marginVertical: 4,
+        borderTopLeftRadius: 10,
+        borderBottomLeftRadius: 10
     },
     containerText : {
         flexDirection:'row', 
@@ -33,10 +34,13 @@ const style = StyleSheet.create({
         width: 35,
         justifyContent: "center",
         alignItems : "center",
+        backgroundColor: Color.secondary,
+        paddingVertical:17,
+        borderTopRightRadius:10,
+        borderBottomRightRadius:10
     },
     textInputIn : { 
-        flex:1, 
-        marginRight:10
+        flex:1
     }
 })
 

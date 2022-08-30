@@ -79,7 +79,6 @@ const Navigation = () => {
                         headerStyle : {
                             backgroundColor : Color.primary
                         },
-                        headerTitleAlign: 'center',
                         headerRight : () => (
                             <TouchableNativeFeedback onPress={() => navigation.navigate("Setting")}>
                                 <Icon name="cog" size={25} color={Color.light}/>
