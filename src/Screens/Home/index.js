@@ -51,6 +51,7 @@ const HomeScreen = ({ navigation }) => {
     const [rate, setRate]             = useState("")
     const [lang, setLang]             = useRecoilState(Language)
     const [thems, setTheme]           = useRecoilState(Theme)
+    const [modal, setModal]           = useState(false)
 
     const count = () => {
         if(principal != "" && time != "" && rate != "" && invest != "") {
@@ -58,7 +59,7 @@ const HomeScreen = ({ navigation }) => {
             let futureValue = parseInt(principal)
             let investment  = parseInt(invest)
             let months      = parseInt(time)*12
-            let monthlyRate = (parseInt(rate)/100)/12
+            let monthlyRate = (parseInt(rate)/100)
 
             for ( let i = 1; i <= months; i++ ) {
                 futureValue = (futureValue + investment) * (1 + monthlyRate);
@@ -95,7 +96,7 @@ const HomeScreen = ({ navigation }) => {
                             />
                         </View>
                         <View style={ style.containerSymbol }>
-                            <Text style={ [style.symbolCurency, thems ? { color: Color.light } : { color: Color.dark }] }>
+                            <Text style={ [style.symbolCurency, { color: Color.dark }] }>
                                 Rp
                             </Text>
                         </View>
@@ -112,7 +113,7 @@ const HomeScreen = ({ navigation }) => {
                             />
                         </View>
                         <View style={ style.containerSymbol }>
-                            <Text style={ [style.symbolCurency, thems ? { color: Color.light } : { color: Color.dark }] }>
+                            <Text style={ [style.symbolCurency, { color: Color.dark }] }>
                                 Rp
                             </Text>
                         </View>
@@ -129,7 +130,7 @@ const HomeScreen = ({ navigation }) => {
                             />
                         </View>
                         <View style={ style.containerSymbol }>
-                            <Text style={ [style.symbolCurency, thems ? { color: Color.light } : { color: Color.dark }] }>
+                            <Text style={ [style.symbolCurency, { color: Color.dark }] }>
                                 %
                             </Text>
                         </View>
@@ -146,7 +147,7 @@ const HomeScreen = ({ navigation }) => {
                             />
                         </View>
                         <View style={ style.containerSymbol }>
-                            <Text style={ [ style.symbolCurency, thems ? { color: Color.light } : { color: Color.dark } ] }>
+                            <Text style={ [ style.symbolCurency, { color: Color.dark } ] }>
                                 { lang ? "Year" : "Thn" }
                             </Text>
                         </View>

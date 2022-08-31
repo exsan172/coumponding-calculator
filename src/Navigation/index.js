@@ -62,9 +62,15 @@ const Navigation = () => {
                         headerStyle : {
                             backgroundColor : Color.primary
                         },
+                        headerTitleAlign: 'center',
                         headerRight : () => (
                             <TouchableNativeFeedback onPress={() => navigation.navigate("Setting")}>
                                 <Icon name="cog" size={25} color={Color.light}/>
+                            </TouchableNativeFeedback>
+                        ),
+                        headerLeft : () => (
+                            <TouchableNativeFeedback onPress={() => navigation.navigate("About", { pages: "about" })}>
+                                <Icon name="information-outline" size={25} color={Color.light}/>
                             </TouchableNativeFeedback>
                         ),
                         animation : "slide_from_right"
@@ -79,6 +85,7 @@ const Navigation = () => {
                         headerStyle : {
                             backgroundColor : Color.primary
                         },
+                        headerTitleAlign: 'center',
                         headerRight : () => (
                             <TouchableNativeFeedback onPress={() => navigation.navigate("Setting")}>
                                 <Icon name="cog" size={25} color={Color.light}/>
@@ -93,6 +100,7 @@ const Navigation = () => {
                     options={{
                         title : lang ? "About Developer" : "Tentang Pengembang",
                         headerTintColor : Color.light,
+                        headerTitleAlign: 'center',
                         headerStyle : {
                             backgroundColor : Color.primary
                         },
@@ -108,6 +116,7 @@ const Navigation = () => {
                         headerStyle : {
                             backgroundColor : Color.primary
                         },
+                        headerTitleAlign: 'center',
                         animation : "slide_from_right"
                     }}
                 />
@@ -120,6 +129,7 @@ const Navigation = () => {
                         headerStyle : {
                             backgroundColor : Color.primary
                         },
+                        headerTitleAlign: 'center',
                         animation : "slide_from_right"
                     }}
                 />

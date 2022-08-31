@@ -41,11 +41,6 @@ const SettingScreen = ({ navigation }) => {
         <View>
             <BannerAds/>
             <View style={style.settingContainer}>
-                <ButtonCustom 
-                    onClick={() => navigation.navigate("About", { pages : "about" })}
-                    text={ lang ? "About Developer" : "Tentang Pengembang" }
-                    icon={<Icon name="code-tags" size={15} color={Color.light}/>}
-                />
                 <ButtonCustom
                     onClick={() => setLanguage(lang ? false : true)}
                     text={ lang ? "Language" : "Bahasa" }
